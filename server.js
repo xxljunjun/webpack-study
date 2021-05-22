@@ -1,18 +1,17 @@
-const express = require('express');
+const webpackDevServer = require('webpack-dev-server');
 const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware'); //接下来是一个 webpack-dev-middleware 配合 express server 的示例。
 
-const app = express();
 const config = require('./webpack.config.js');
+const options = {
+	contentBase: './dist',
+	hot: true,
+	host: 'localhost'
+};
+
+webpackDevServer.addDevServerEntrypoints(config, options);
 const compiler = webpack(config);
+const server = new webpackDevServer(compiler, options);
 
-// Tell express to use the webpack-dev-middleware and use the webpack.config.js
-// configuration file as a base.
-app.use(webpackDevMiddleware(compiler, {
-	publicPath: config.output.publicPath
-}));
-
-// Serve the files on port 3000.
-app.listen(8000, function () {
-	console.log('http://localhost:8000');
+server.listen(5000, 'localhost', () => {
+	console.log('dev server listening on port 5000');
 });
