@@ -1,4 +1,8 @@
 body {
 	/* background: blue; */
 	/* background: red; */
+	background: #ccc;
   }
+button{
+	cursor: pointer;
+}
