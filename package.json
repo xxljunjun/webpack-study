@@ -1,33 +1,33 @@
 {
-  "name": "wep-demo",
+  "name": "webpackdemo",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "server": "node server.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxljunjun/webpack-study.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xxljunjun/webpack-study/issues"
+  },
+  "homepage": "https://github.com/xxljunjun/webpack-study#readme",
   "devDependencies": {
-    "clean-webpack-plugin": "^4.0.0-alpha.0",
-    "css-loader": "^5.2.5",
+    "css-loader": "^6.5.1",
     "csv-loader": "^3.0.3",
-    "express": "^4.17.1",
     "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.37.1",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-middleware": "^4.3.0",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-merge": "^5.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "webpack-cli": "^4.9.1"
   }
 }
