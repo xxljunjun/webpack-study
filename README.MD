@@ -174,3 +174,24 @@ output: {
     clean: true,
   }
 ```
+### 七、开发调试
++ Using source maps
+```js
+module.exports = {
+  devtool: 'inline-source-map',
+}
+```
++ 添加package.json
+```js
+//可以监听到dis文件夹的变化
+"scripts": {
+    "watch": "webpack --watch"
+},
+```
++ HRM热更新
+```js
+npm install --save webpack-dev-server
+devServer: {
+    static: './dist'//踩坑！！！static
+  },
+```
